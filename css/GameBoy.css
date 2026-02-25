@@ -3,10 +3,6 @@ html {
 	background-color: rgb(200, 225, 225);
 	background-attachment: fixed;
 	background-repeat: none;
-	background-image: url("../images/gradient_01.svg");
-	background-image: -webkit-linear-gradient(315deg, rgb(200, 200, 255), rgb(200, 255, 200));
-	background-image: -moz-linear-gradient(315deg, rgb(200, 200, 255), rgb(200, 255, 200));
-	background-image: -o-linear-gradient(315deg, rgb(200, 200, 255), rgb(200, 255, 200));
 	background-image: linear-gradient(135deg, rgb(200, 200, 255), rgb(200, 255, 200));
 	margin: 0;
 	padding: 0;
@@ -34,8 +30,6 @@ div.menubar, div#GameBoy > div#gfx, div.window > div.button_rack, ul.menu {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
 	user-select: none;
 }
 div.window {
@@ -49,9 +43,7 @@ div.window {
 	left: 0;
 	color: rgb(0, 0, 0);
 	font-size: 16px;
-	-webkit-border-radius: 10px 10px 3px 3px;
 	border-radius: 10px 10px 3px 3px;
-	-webkit-box-shadow: 5px 5px 10px rgb(30, 30, 30);
 	box-shadow: 5px 5px 10px rgb(30, 30, 30);
 	background-color: rgb(200, 200, 200);
 	z-index: 2;
@@ -71,7 +63,7 @@ div#instructions {
 }
 div.menubar {
 	max-height: 28px;
-	min-width: 250px;	/*Fail safe for poopy browsers.*/
+	min-width: 250px;
 	display: block;
 	overflow: hidden;
 	position: absolute;
@@ -92,15 +84,10 @@ div.menubar {
 	background-color: rgb(210, 210, 210);
 	background-repeat: repeat-x;
 	background-attachment: scroll;
-	background-image: url("../images/gradient_02.svg");
-	background-image: -webkit-linear-gradient(top, rgb(150, 150, 150), rgb(220, 220, 220), rgb(180, 180, 180));
-	background-image: -moz-linear-gradient(top, rgb(150, 150, 150), rgb(220, 220, 220), rgb(180, 180, 180));
-	background-image: -o-linear-gradient(top, rgb(150, 150, 150), rgb(220, 220, 220), rgb(180, 180, 180));
-	background-image: linear-gradient(top, rgb(150, 150, 150), rgb(220, 220, 220), rgb(180, 180, 180));
+	background-image: linear-gradient(to bottom, rgb(150, 150, 150), rgb(220, 220, 220), rgb(180, 180, 180));
 }
 div.menubar > span {
 	cursor: pointer;
-	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	background-color: transparent;
 	padding: 2px 5px;
@@ -109,28 +96,18 @@ div.menubar > span {
 	display: inline-block;
 }
 div.menubar > span:hover {
-	-webkit-box-shadow: 2px 2px 1px rgb(30, 30, 30);
 	box-shadow: 2px 2px 1px rgb(30, 30, 30);
 	background-color: rgb(160, 160, 160);
 	background-repeat: repeat-x;
 	background-attachment: scroll;
-	background-image: url("../images/gradient_03.svg");
-	background-image: -webkit-linear-gradient(top, rgb(160, 160, 160), rgb(190, 190, 190), rgb(160, 160, 160));
-	background-image: -moz-linear-gradient(top, rgb(160, 160, 160), rgb(190, 190, 190), rgb(160, 160, 160));
-	background-image: -o-linear-gradient(top, rgb(160, 160, 160), rgb(190, 190, 190), rgb(160, 160, 160));
-	background-image: linear-gradient(top, rgb(160, 160, 160), rgb(190, 190, 190), rgb(160, 160, 160));
+	background-image: linear-gradient(to bottom, rgb(160, 160, 160), rgb(190, 190, 190), rgb(160, 160, 160));
 }
 div.menubar > span:active {
-	-webkit-box-shadow: inset 2px 2px 1px rgb(30, 30, 30);
 	box-shadow: inset 2px 2px 1px rgb(30, 30, 30);
 	background-color: rgb(220, 220, 220);
 	background-repeat: repeat-x;
 	background-attachment: scroll;
-	background-image: url("../images/gradient_04.svg");
-	background-image: -webkit-linear-gradient(top, rgb(190, 190, 190), rgb(160, 160, 160), rgb(190, 190, 190));
-	background-image: -moz-linear-gradient(top, rgb(190, 190, 190), rgb(160, 160, 160), rgb(190, 190, 190));
-	background-image: -o-linear-gradient(top, rgb(190, 190, 190), rgb(160, 160, 160), rgb(190, 190, 190));
-	background-image: linear-gradient(top, rgb(190, 190, 190), rgb(160, 160, 160), rgb(190, 190, 190));
+	background-image: linear-gradient(to bottom, rgb(190, 190, 190), rgb(160, 160, 160), rgb(190, 190, 190));
 }
 div#gfx {
 	height: auto;
@@ -145,11 +122,7 @@ div#gfx {
 	background-color: rgb(200, 50, 50);
 	background-repeat: repeat-x;
 	background-attachment: scroll;
-	background-image: url("../images/gradient_05.svg");
-	background-image: -webkit-linear-gradient(top, rgb(200, 50, 50), rgb(200, 75, 150));
-	background-image: -moz-linear-gradient(top, rgb(200, 50, 50), rgb(200, 75, 150));
-	background-image: -o-linear-gradient(top, rgb(200, 50, 50), rgb(200, 75, 150));
-	background-image: linear-gradient(top, rgb(200, 50, 50), rgb(200, 75, 150));
+	background-image: linear-gradient(to bottom, rgb(200, 50, 50), rgb(200, 75, 150));
 }
 body > div#fullscreenContainer {
 	position: absolute;	/*Fallback here if fixed isn't supported*/
@@ -249,9 +222,7 @@ div.storageList {
 	text-align: left;
 	bottom: 50px;
 	background-color: rgb(140, 140, 140);
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	-webkit-box-shadow: inset 3px 3px 2px 1px rgb(110, 110, 110);
 	box-shadow: inset 3px 3px 2px 1px rgb(110, 110, 110);
 	padding: 3px;
 }
@@ -267,9 +238,7 @@ div#download_all_storage {
 	text-align: center;
 	font-style: bold;
 	background-color: rgb(140, 140, 140);
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	-webkit-box-shadow: inset 3px 3px 2px 1px rgb(110, 110, 110);
 	box-shadow: inset 3px 3px 2px 1px rgb(110, 110, 110);
 	padding: 3px;
 }
@@ -398,14 +367,8 @@ ul.menu {
 	background-color: rgb(200, 200, 200);
 	background-repeat: repeat-x;
 	background-attachment: scroll;
-	background-image: url("../images/gradient_06.svg");
-	background-image: -webkit-linear-gradient(left, rgb(200, 200, 200), rgb(240, 240, 240));
-	background-image: -moz-linear-gradient(left, rgb(200, 200, 200), rgb(240, 240, 240));
-	background-image: -o-linear-gradient(left, rgb(200, 200, 200), rgb(240, 240, 240));
-	background-image: linear-gradient(left, rgb(200, 200, 200), rgb(240, 240, 240));
-	-webkit-border-radius: 3px;
+	background-image: linear-gradient(to right, rgb(200, 200, 200), rgb(240, 240, 240));
 	border-radius: 3px;
-	-webkit-box-shadow: 5px 5px 10px rgb(30, 30, 30);
 	box-shadow: 5px 5px 10px rgb(30, 30, 30);
 	border-style: solid;
 	border-top-width: 1px;
