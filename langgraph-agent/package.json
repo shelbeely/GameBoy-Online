@@ -1,0 +1,21 @@
+{
+  "name": "gameboy-langgraph-agent",
+  "version": "1.0.0",
+  "description": "LangGraph.js agent for GameBoy Online Pokémon Silver automation",
+  "type": "module",
+  "main": "agent.js",
+  "scripts": {
+    "start": "node agent.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.1.28",
+    "@langchain/langgraph": "^1.1.5",
+    "ws": "^8.19.0"
+  },
+  "overrides": {
+    "@langchain/langgraph-sdk": "^1.6.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
