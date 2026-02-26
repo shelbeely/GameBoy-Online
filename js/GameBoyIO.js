@@ -1,6 +1,7 @@
 "use strict";
 var gameboy = null;						//GameBoyCore object.
 var gbRunInterval = null;				//GameBoyCore Timer
+var agentMode = false;					//When true, the emulator loop continues running even when the browser tab is hidden (needed for background idle play).
 var settings = [						//Some settings.
 	true, 								//Turn on sound.
 	true,								//Boot with boot ROM first?
@@ -36,7 +37,7 @@ function run() {
 			gameboy.firstIteration = dateObj.getTime();
 			gameboy.iterations = 0;
 			gbRunInterval = setInterval(function () {
-				if (!document.hidden) {
+				if (!document.hidden || agentMode) {
 					gameboy.run();
 				}
 			}, settings[6]);
